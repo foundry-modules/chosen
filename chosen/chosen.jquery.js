@@ -1,3 +1,10 @@
+$.require()
+.stylesheet( 'chosen/chosen' )
+.done(function($){
+
+
+var globalChosen = {};
+
 // Chosen, a Select Box Enhancer for jQuery and Protoype
 // by Patrick Filler for Harvest, http://getharvest.com
 // 
@@ -88,7 +95,7 @@
 
   this.SelectParser = SelectParser;
 
-}).call(this);
+}).call(globalChosen);
 
 /*
 Chosen source: generate output using 'cake build'
@@ -96,8 +103,8 @@ Copyright (c) 2011 by Harvest
 */
 
 (function() {
-  var AbstractChosen, root;
 
+  var AbstractChosen, root;
   root = this;
 
   AbstractChosen = (function() {
@@ -264,7 +271,7 @@ Copyright (c) 2011 by Harvest
 
   root.AbstractChosen = AbstractChosen;
 
-}).call(this);
+}).call(globalChosen);
 
 /*
 Chosen source: generate output using 'cake build'
@@ -1014,7 +1021,7 @@ Copyright (c) 2011 by Harvest
 
     return Chosen;
 
-  })(AbstractChosen);
+  })(root.AbstractChosen);
 
   get_side_border_padding = function(elmt) {
     var side_border_padding;
@@ -1023,4 +1030,6 @@ Copyright (c) 2011 by Harvest
 
   root.get_side_border_padding = get_side_border_padding;
 
-}).call(this);
+}).call(globalChosen);
+
+});
