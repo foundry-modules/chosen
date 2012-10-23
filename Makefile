@@ -31,6 +31,10 @@ assets:
 	cp -Rp chosen/*.css ${PRODUCTION_FOLDER}/
 	cp -Rp chosen/*.png ${PRODUCTION_FOLDER}/
 
+	mkdir -p ${STYLES_DIR}/chosen
+	cp -Rp chosen/chosen.css ${STYLES_DIR}/chosen/default.less
+	cp -Rp chosen/chosen-sprite.png ${STYLES_DIR}/chosen/chosen-sprite.png
+
 clean:
 	rm -rf ${DEVELOPMENT}
 	rm -rf ${DEVELOPMENT_FOLDER}
