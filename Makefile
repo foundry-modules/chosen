@@ -32,7 +32,7 @@ assets:
 	cp -Rp chosen/*.png ${PRODUCTION_FOLDER}/
 
 	mkdir -p ${STYLES_DIR}/chosen
-	# cat chosen/chosen.css | sed 's/chosen-sprite.png/@{foundry}\/styles\/chosen\/chosen-sprite.png/g' > ${STYLES_DIR}/chosen/default.less
+	# cat chosen/chosen.css | sed 's/chosen-sprite.png/@{foundry_uri}\/styles\/chosen\/chosen-sprite.png/g' > ${STYLES_DIR}/chosen/default.less
 	cp chosen/chosen.less ${STYLES_DIR}/chosen/default.less
 	cp -Rp chosen/chosen-sprite.png ${STYLES_DIR}/chosen/chosen-sprite.png
 
