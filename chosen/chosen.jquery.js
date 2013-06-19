@@ -1,8 +1,3 @@
-$.require()
-.stylesheet( 'chosen/chosen' )
-.done(function($){
-
-
 var globalChosen = {};
 
 // Chosen, a Select Box Enhancer for jQuery and Protoype
@@ -1031,5 +1026,3 @@ Copyright (c) 2011 by Harvest
   root.get_side_border_padding = get_side_border_padding;
 
 }).call(globalChosen);
-
-});
