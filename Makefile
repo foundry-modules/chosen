@@ -6,10 +6,10 @@ MODULE		= chosen
 MODULARIZE_OPTIONS = -jq
 
 SOURCE_SCRIPT_FOLDER = chosen
-SOURCE_SCRIPT_FILE_PREFIX = 
+SOURCE_SCRIPT_FILE_PREFIX =
 SOURCE_SCRIPT_FILE_SUFFIX = .jquery.js
 
-SOURCE_STYLE_FILE_PREFIX = 
+SOURCE_STYLE_FILE_PREFIX =
 
 SOURCE_ASSET_FILES = chosen/chosen-sprite.png
-TARGET_STYLE_LESS_CONVERTER = sed 's/chosen-sprite.png/@{foundry_uri}\/chosen\/chosen-sprite.png/g'
+TARGET_STYLE_LESS_CONVERTER = sed 's/chosen-sprite.png/@{global_uri}\/chosen\/chosen-sprite.png/g'
