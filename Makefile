@@ -1,4 +1,4 @@
-all: modularize-script minify-script copy-style copy-assets
+all: modularize-script minify-script copy-style copy-variables copy-assets
 
 include ../../build/modules.mk
 
@@ -16,3 +16,5 @@ CSS_FILE_SUFFIX_UNCOMPRESSED = .less
 SOURCE_ASSET_FILES = chosen/chosen-sprite.png
 # TARGET_STYLE_LESS_CONVERTER = sed 's/chosen-sprite.png/@{global_uri}\/chosen\/chosen-sprite.png/g'
 
+copy-variables:
+	cp chosen/variables.less ${TARGET_STYLE_FOLDER}/variables.less
