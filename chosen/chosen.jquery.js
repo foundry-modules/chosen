@@ -2,7 +2,7 @@ var globalChosen = {};
 
 // Chosen, a Select Box Enhancer for jQuery and Protoype
 // by Patrick Filler for Harvest, http://getharvest.com
-// 
+//
 // Version 0.9.8
 // Full source at https://github.com/harvesthq/chosen
 // Copyright (c) 2011 Harvest http://getharvest.com
@@ -1024,5 +1024,15 @@ Copyright (c) 2011 by Harvest
   };
 
   root.get_side_border_padding = get_side_border_padding;
+
+  var updateLayout = $.debounce(function(e) {
+      var chznWrapper = $('.chzn-container').parent();
+      $('.chzn-container').innerWidth(chznWrapper.innerWidth());
+      $('.chzn-search input').innerWidth(chznWrapper.innerWidth()-12);
+      $('.chzn-drop').innerWidth(chznWrapper.innerWidth()-2);
+
+  }, 500);
+
+  window.addEventListener("resize", updateLayout, false);
 
 }).call(globalChosen);
